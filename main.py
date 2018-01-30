@@ -147,7 +147,7 @@ def model_init(n_hidden,vocab_size, embed_dim, max_seq_length, embed_weights, ct
     model.embedding.weight.set_data(embed_weights)
          
     trainer = gluon.Trainer(model.collect_params(), 'rmsprop')
-    loss = SoftmaxCrossEntropyLossMask(axis = 2)
+    loss = SoftmaxCrossEntropyLossMask(end_idx, axis = 2)
     return(model, loss, trainer)
 
 
@@ -290,7 +290,7 @@ if opt.train:
     else:
         print("train start from '{}'".format(opt.init_model))
         model.load_params(opt.init_model, ctx=ctx)
-        trainer_sgd = gluon.Trainer(model.collect_params(), 'sgd', optimizer_params={'learning_rate':0.01,},  kvstore='device')
+        trainer_sgd = gluon.Trainer(model.collect_params(), 'sgd', optimizer_params={'learning_rate':0.1,}, kvstore='local')
         tr_loss, te_loss = train(5, tr_data_iterator, model, loss, trainer_sgd, ctx=ctx, mdl_desc=opt.model_prefix, decay=True)
 
 if opt.test:

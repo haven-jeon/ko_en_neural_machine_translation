@@ -76,8 +76,8 @@ kor >
 ```
 
 - models/trained_model.params
-  1. rmsprop(batch size : 100, lr : 0.01) 7 epocs 
-  1. sgd 33 epocs(batch size : 100, lr : 0.01)
+  1. rmsprop(batch size : 100, lr : 0.01) : 7 epocs 
+  1. sgd (batch size : 100, lr : 0.01) : 33 epocs
 
 
 

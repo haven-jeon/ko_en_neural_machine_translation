@@ -1,5 +1,8 @@
 ### Neural Korean to English Machine Translater with Gluon  
 
+2018 마이크로소프트웨어 기사를 통해 오신분은 [이곳](maso_ver/)을 참고하세요. 
+
+
 ####  특징  
 
 - Seq2Seq with Attention 
@@ -9,7 +12,7 @@
 - Variable Sentence Length 학습  
 
 
-### 요구사항 
+#### 요구사항 
 
 - Python 3.5 이상 
 - MXNet 1.0 이상 

@@ -16,7 +16,7 @@
 
 - Python 3.5 이상 
 - MXNet 1.0 이상 
-- tqdm, konlpy, stemming
+- tqdm, konlpy, stemming, gensim
 
 #### 구성
 

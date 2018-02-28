@@ -94,7 +94,7 @@ class korean_english_translator(gluon.HybridBlock):
             if self.attention:
                 self.dropout = nn.Dropout(0.3)
                 self.attdense = nn.Dense(self.max_seq_length, flatten=False)
-                self.attn_combine = nn.Dense( self.vocab_size, flatten=False)
+                self.attn_combine = nn.Dense( self.n_hidden, flatten=False)
             
     def hybrid_forward(self, F, inputs, outputs, initial_hidden_state, batch_size_seq):
         #문장 길이 2 == END tag index
